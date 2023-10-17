@@ -1,0 +1,47 @@
+* {
+box-sizing: border-box;
+font-family: 'Gabarito', 'sans-serif';
+
+}
+
+/* TEXT */
+p, li {
+    font-size: 1.15rem;
+}
+
+.image_description p {
+    font-size: 0.9rem !important;
+    margin-left: 15px;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* CONTAINERS */
+
+#recipe_image {
+    max-width: 800px;
+}
+
+#recipe_container {
+    margin: auto;
+    padding: 25px 50px;
+}
+
+
+.eggtimer {
+    width: 50vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.eggtimer_const {
+    display: block;
+}
