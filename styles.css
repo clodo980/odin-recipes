@@ -1,4 +1,273 @@
+:root {
+   --black: #201b27;
+   --cremebrulee: #daac78;
+   --cream: #f6e2c0;
+   --white: #F9EFDC;
+   --creamsicle: #f08f45;
+   --creamsicle2: #f8b067;
+   --orange: #e06920;
+}
+
 * {
-box-sizing: border-box;
-font-family:'Gabarito';
+    box-sizing: border-box;
+    margin: 0;
+/* BORDERS FOR DIV CHECK -- border: 3px solid #1E152A; */
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #964411;
+}
+/* NAVBAR - WEB */
+
+#navbar {
+    width: 100vw;
+    height: 70px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0 25px;
+    background-color: var(--cream);
+    color: var(--orange);
+    font-family: 'Gabarito', sans-serif;
+    position: fixed;
+    z-index: 999;
+}
+
+#navbar, #links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container:first-child > span { margin-right: auto; }
+
+.nav-container:last-child  > span { margin-left: auto;  }
+
+#logo span {
+    display: flex; /* or display: inline-block; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#odin {
+    font-size: 33px;
+    letter-spacing: -0.06rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.fa-solid {
+    margin-top: 5px;
+    padding: 0 10px;
+    font-size: 1.75em;
+}
+
+#links {
+    margin-top: 3px;
+    margin-left: -5px;
+    text-transform: uppercase;
+    flex-basis: auto;
+
+}
+
+#links a {
+    padding: 0 25px;
+}
+
+#links a, .text-with-link a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+#clodo980 a {
+    color: var(--cremebrulee);
+}
+
+.text-with-link a:hover, #links a:hover, #clodo980 a:hover {
+    color: var(--creamsicle);
+}
+
+#links a:hover, .button:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+/* MAIN SECTION */
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HERO */
+
+#landing {
+    position: relative;
+    padding-top: 175px;
+    width: 100vw;
+    height: 655px;
+    color: var(--cream);
+    font-family: 'Gabarito', serif;
+    text-align: center;
+}
+
+#landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(misc_images/cooking-background.jpg);
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* In this example, we've added a ::before pseudo-element to the #landing element,
+and set its background-image and background-size. We've also adjusted the opacity
+property to control the opacity of the background image. */
+
+#landing h1 {
+    margin: 0 auto;
+    font-size: 108px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+#subheading {
+    margin-top: 25px;
+    font-weight: 200;
+    font-size: 28px;
+}
+
+/* RECIPE CARDS */
+
+#recipe-index {
+    z-index: 2;
+    position: absolute;
+    top: 550px;
+    width: 100vw;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.recipe-card {
+    width: 300px;
+    height: auto;
+    position: relative;
+    padding: 20px;
+    background-color: var(--cream);
+    margin: auto;
+    overflow: hidden;
+    color: var(--orange);
+}
+
+.recipe-card:hover {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: 0.1s;
+    transition-timing-function: ease-in-out;
+    box-shadow: 0px 15px var(--orange);
+}
+
+.description {
+    display: none;
+}
+
+.recipe-card:hover .description {
+    display: block;
+    line-height: 1.625rem;
+    margin-top: 10px;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }  
+
+.card-image-container {
+    width: 100%;
+    height: 250px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-image-container .square {
+    width: 350px;
+    margin-left: -30px;
+    height: auto;
+}
+
+.card-image-container .landscape {
+    width: 400px;
+    height: auto;
+    margin-left: -55px;
+}
+
+/* MORE INFO */
+
+#more {
+    width: 100vw;
+    height: 800px;
+    padding: 300px 150px 0px 150px;
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: Gabarito;
+    font-size: 18px;
+}
+
+#more h3 {
+    color: var(--orange);
+    font-size: 54px;
+    margin-bottom: 50px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--cream);
+    padding: 15px;
+    margin-top: 50px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--creamsicle2);
+    color: var(--orange);
+}
+
+/* FOOTER */
+
+footer {
+    display: inline-block;
+    width: 100vw;
+    height: 75px;
+    background-color: var(--creamsicle);
+    color: var(--cream);
+    letter-spacing: 0.05rem;
+    font-family: Gabarito, sans-serif;
+    text-align: center;
+    margin: auto;
+    padding-top: 25px;
+}
+
+footer a {
+    color: var(--cream);
 }

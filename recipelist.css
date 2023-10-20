@@ -1,0 +1,210 @@
+:root {
+    --black: #201b27;
+    --cremebrulee: #daac78;
+    --cream: #f6e2c0;
+    --white: #F9EFDC;
+    --creamsicle: #f08f45;
+    --creamsicle2: #f8b067;
+    --orange: #e06920;
+ }
+ 
+ * {
+     box-sizing: border-box;
+     margin: 0;
+ /* BORDERS FOR DIV CHECK -- border: 3px solid #1E152A; */
+ }
+ 
+ html {
+     scroll-behavior: smooth;
+ }
+ /* NAVBAR - WEB */
+ 
+ #navbar {
+     width: 100vw;
+     height: 70px;
+     margin: 0;
+     top: 0;
+     left: 0;
+     padding: 0 25px;
+     background-color: var(--cream);
+     color: var(--orange);
+     font-family: 'Gabarito', sans-serif;
+     position: fixed;
+     z-index: 999;
+ }
+ 
+ #navbar, #links {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .nav-container {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .nav-container:first-child > span { margin-right: auto; }
+ 
+ .nav-container:last-child  > span { margin-left: auto;  }
+ 
+ #logo span {
+     display: flex; /* or display: inline-block; */
+     flex-direction: row;
+     flex-wrap: nowrap;
+ }
+ 
+ #odin {
+     font-size: 33px;
+     letter-spacing: -0.06rem;
+     font-family: 'Roboto Condensed', sans-serif;
+ }
+ 
+ .fa-solid {
+     margin-top: 5px;
+     padding: 0 10px;
+     font-size: 1.75em;
+ }
+ 
+ #links {
+     margin-top: 3px;
+     margin-left: -5px;
+     text-transform: uppercase;
+     flex-basis: auto;
+ 
+ }
+ 
+ #links a {
+     padding: 0 25px;
+ }
+ 
+ #links a, .text-with-link a, #all-recipes a {
+     text-decoration: none;
+     color: var(--orange);
+ }
+ 
+ #clodo980 a {
+     color: var(--cremebrulee);
+ }
+ 
+ .text-with-link a:hover, #links a:hover, #clodo980 a:hover {
+     color: var(--creamsicle);
+ }
+ 
+ #links a:hover, .button:hover {
+     transform: scale(1.05);
+     transition: 0.2s;
+ }
+
+ /* MAIN SECTION */
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+}
+
+main {
+    padding: 175px 125px 0px 125px;
+    width: 100vw;
+    height: 800px;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: Gabarito, sans-serif;
+}
+
+h1, h3 {
+    color: var(--orange);
+}
+
+/* RECIPE CARDS */
+
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 36px;
+    letter-spacing: -0.05rem;
+    margin-bottom: 10px;
+}
+
+#all-recipes {
+    display: flex;
+    flex-direction: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.recipe-card {
+    box-sizing: border-box;
+    position: relative;
+    width: 550px;
+    height: 200px;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: var(--black);
+    font-family: Gabarito, sans-serif;
+    overflow: clip;
+}
+
+.card-img {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 300px;
+    height: auto;
+    margin-left: -25px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#all-recipes h3:hover {
+    color: var(--creamsicle);
+}
+
+.recipe-card:hover {
+    background-color: var(--white);
+    transform: scale(1.025);
+    transition: 0.2s;
+}
+
+.card-desc {
+    position: absolute;
+    width: 275px; /* Adjust this width as needed to fit your content */
+    height: auto; /* Allow the height to adjust based on content */
+    left: 275px; /* Adjust the left positioning as needed */
+    top: 0;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 10px;
+    overflow: visible; /* Change overflow to visible */
+}
+
+/* FOOTER */
+
+footer {
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: 75px;
+    background-color: var(--creamsicle);
+    color: var(--cream);
+    letter-spacing: 0.05rem;
+    font-family: Gabarito, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+footer a {
+    color: var(--cream);
+}

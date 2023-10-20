@@ -1,7 +1,22 @@
-* {
-box-sizing: border-box;
-font-family: 'Gabarito', 'sans-serif';
+:root {
+    --black: #201b27;
+    --cremebrulee: #daac78;
+    --cream: #f6e2c0;
+    --white: #F9EFDC;
+    --creamsicle: #f08f45;
+    --creamsicle2: #f8b067;
+    --orange: #e06920;
+ }
+ 
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* TEXT */
@@ -11,37 +26,205 @@ p, li {
 
 .image_description p {
     font-size: 0.9rem !important;
-    margin-left: 15px;
+    margin-left: 10px;
+}
+
+/* NAVBAR - WEB */
+
+#navbar {
+    width: 100vw;
+    height: 70px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0 25px;
+    background-color: var(--cream);
+    color: var(--orange);
+    font-family: 'Gabarito', sans-serif;
+    position: fixed;
+    z-index: 999;
+}
+
+#navbar, #links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container:first-child > span { margin-right: auto; }
+
+.nav-container:last-child  > span { margin-left: auto;  }
+
+#logo span {
+    display: flex; /* or display: inline-block; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#odin {
+    font-size: 33px;
+    letter-spacing: -0.06rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.fa-solid {
+    margin-top: 5px;
+    padding: 0 10px;
+    font-size: 1.75em;
+}
+
+#links {
+    margin-top: 3px;
+    margin-left: -5px;
+    text-transform: uppercase;
+    flex-basis: auto;
+
+}
+
+#links a {
+    padding: 0 25px;
+}
+
+.recipe-credits a:hover, .image_description :hover, #links a:hover {
+    color: var(--creamsicle);
 }
 
 
+#clodo980 a {
+    color: var(--cremebrulee);
+}
+
+#clodo980 a:hover {
+    color: var(--creamsicle);
+}
+
+/* MAIN SECTION */
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    font-family: 'Gabarito', sans-serif;
+    color: var(--black);
+}
+
+main {
+    width: 100vw;
+    height: auto;
+}
+
+
+/* TEXT STYLING - MAIN SECTION */
+
 h1 {
-    font-size: 2.5rem;
+    font-size: 60px;
+    margin-bottom: 15px;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 42px;
+    margin: 50px 0 15px 0;
 }
+
+h3 {
+    font-size: 24px;
+    letter-spacing: 0.015rem;
+    margin: 20px 0 5px 0;
+}
+
+h1, h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1, h2, .description {
+    color: var(--orange);
+}
+
+.description {
+    font-family: 'Gabarito', sans-serif;
+    margin-bottom: 25px;
+}
+
+.eggtimer p {
+    color: var(--cream);
+}
+
+ul > li {
+    margin-bottom: 3px;
+}
+
+ol > li {
+    margin-bottom: 10px;
+}
+
+.recipe-credits, .image_description {
+    color: #201b2788;
+}
+
+.recipe-credits a, .image_description a, #links a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
 
 /* CONTAINERS */
 
 #recipe_image {
-    max-width: 800px;
+    width: 800px;
+    height: auto;
+    margin-top: 25px;
 }
 
 #recipe_container {
     margin: auto;
-    padding: 25px 50px;
+    padding: 150px 125px 0px 125px;
 }
 
-
 .eggtimer {
-    width: 50vw;
+    width: 800px;
+    height: auto;
+    margin: 25px 0;
+    padding: 25px 50px 25px 30px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    background-color: var(--orange);
 }
 
 .eggtimer_const {
     display: block;
+}
+
+aside {
+    background-color: var(--white);
+    color: var(--orange);
+    padding: 25px;
+    line-height: 1.25rem;
+    margin: 20px 0;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    padding-top: 25px;
+    margin-top: 50px;
+    width: 100vw;
+    height: 75px;
+    background-color: var(--creamsicle);
+    color: var(--cream);
+    letter-spacing: 0.05rem;
+    font-family: Gabarito, sans-serif;
+    text-align: center;
+}
+
+footer a {
+    color: var(--cream);
 }
