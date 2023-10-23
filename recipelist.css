@@ -107,13 +107,56 @@ body {
 }
 
 main {
-    padding: 175px 125px 0px 125px;
     width: 100vw;
-    height: 800px;
 }
 
+/*** RESPONSIVE DESIGN ADJUSTMENTS ***/
+
+/* ONE - laptop and desktop */
+@media (min-width: 1381px) {
+
+main {
+    padding: 175px 125px 0px 125px;
+    height: 800px;
+};
 h1 {
     font-size: 60px;
+};
+footer {
+    margin: 0 auto;
+}
+
+}
+
+/* TWO - tablets and smaller monitors */
+
+@media (max-width: 1380px) {
+    main {
+        padding: 150px 75px 0px 75px;
+        height: auto;
+    };
+    h1 {
+        font-size: 48px;
+        margin-bottom: 25px;
+        text-align: center;
+    };
+    footer {
+        margin: 50px auto 0px auto;
+    }
+}
+
+/* THREE - mobile devices */
+
+@media (max-width: 700px) {
+    main {
+        padding: 150px 50px 0px 50px;
+        height: auto;
+    };
+}
+
+/*** END OF RESPONSIVE DESIGN ADJUSTMENTS ***/
+
+h1 {
     font-family: Gabarito, sans-serif;
 }
 
@@ -196,13 +239,12 @@ footer {
     position: relative;
     width: 100vw;
     height: 75px;
+    padding-top: 25px;
     background-color: var(--creamsicle);
     color: var(--cream);
     letter-spacing: 0.05rem;
     font-family: Gabarito, sans-serif;
     text-align: center;
-    margin: 0 auto;
-    padding-top: 25px;
 }
 
 footer a {
